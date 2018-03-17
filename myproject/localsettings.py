@@ -25,7 +25,7 @@ SECRET_KEY = 'cqjs00t^o+)_)8o7i&kq3&-o!@wh9ef+3_3la5u*73&ckt@df)'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1','my-url-project.herokuapp.com']
+ALLOWED_HOSTS = []
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
 # Application definition
@@ -77,12 +77,8 @@ WSGI_APPLICATION = 'myproject.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'ddtmfk010mj944',
-        'USER': 'hfotsrqcynavzu',
-        'PASSWORD': 'b731bff7b1b040e43fb0bdefe3aa321ee9a22dbfdebef00cb72da0d2365cc43e',
-        'HOST': 'ec2-54-204-44-140.compute-1.amazonaws.com',
-        'PORT': '5432',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
 
